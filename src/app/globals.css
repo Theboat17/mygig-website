@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === FONT FACES === */
+
+/* Grenette Pro — Display / Headings */
+@font-face {
+  font-family: "Grenette Pro";
+  src: url("/fonts/GrenettePro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grenette Pro";
+  src: url("/fonts/GrenettePro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grenette Pro";
+  src: url("/fonts/GrenettePro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Onest — Body / UI */
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === CSS CUSTOM PROPERTIES === */
+
+:root {
+  /* PRIMARY / BRAND */
+  --color-primary: #0a0f16;
+  --color-white: #ffffff;
+
+  /* BRAND ACCENT (Purple) */
+  --color-accent: #855eee;
+  --color-accent-vivid: #6c60ff;
+  --color-lavender: #dcd8fa;
+  --color-lavender-mid: #e8e6f9;
+
+  /* NEUTRALS */
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f0f0f0;
+  --color-neutral-300: #f0f0f5;
+  --color-neutral-400: #d5dadd;
+  --color-neutral-500: #b8bec1;
+  --color-neutral-600: #969da0;
+  --color-neutral-700: #696e72;
+  --color-neutral-800: #45494b;
+  --color-neutral-900: #0a0f16;
+
+  /* STATUS */
+  --color-success: #05c168;
+  --color-success-bg: #def2e6;
+  --color-info: #1d88fe;
+  --color-info-bg: #eaf4ff;
+  --color-danger: #ff5a65;
+  --color-danger-bg: #ffeff0;
+  --color-warning: #ff9e2c;
+  --color-warning-bg: #ffedd1;
+
+  /* SHADOWS */
+  --shadow-xs: 0 1px 2px rgba(20, 20, 43, 0.06);
+  --shadow-sm: 0 2px 4px rgba(20, 20, 43, 0.08);
+  --shadow-md: 0 4px 8px rgba(20, 20, 43, 0.12);
+  --shadow-lg: 0 8px 16px rgba(20, 20, 43, 0.16);
+  --shadow-xl: 0 12px 24px rgba(20, 20, 43, 0.2);
+  --shadow-2xl: 0 16px 32px rgba(20, 20, 43, 0.24);
+  --shadow-btn: 0 2px 4px rgba(10, 15, 22, 0.12);
+}
+
+/* === BASE STYLES === */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Onest", system-ui, sans-serif;
+  color: var(--color-neutral-800);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === ACCESSIBILITY === */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  width: auto;
+  height: auto;
+  padding: 12px 24px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  z-index: 9999;
+  border-radius: 8px;
+  font-family: "Onest", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent-vivid);
+  outline-offset: 2px;
+}
+
+/* === REDUCED MOTION === */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

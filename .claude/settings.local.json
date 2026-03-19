@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf node_modules package.json package-lock.json)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack --use-npm)",
+      "Bash(mkdir -p src/app src/components/layout src/components/sections src/components/ui src/components/animation src/lib public/fonts public/images)",
+      "Bash(mv publicfonts/*.woff2 public/fonts/)",
+      "Bash(rmdir publicfonts:*)",
+      "Bash(touch public/fonts/Onest-Regular.woff2 public/fonts/Onest-Medium.woff2 public/fonts/Onest-Bold.woff2)",
+      "Bash(find C:UsersjdharProjectsnew-mygig-website -name *.svg -o -name *.png -o -name *logo*)",
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cp \"Logos/MyGig Logo Black x2.png\" \"public/images/MyGig_Logo_Black_x2.png\")",
+      "Bash(cp \"Logos/Group 37 \\(1\\).png\" \"public/images/mygig-logo-white.png\")",
+      "Bash(cp \"Logos/mygig \\(1\\).png\" \"public/images/mygig-logo-tagline.png\")",
+      "Bash(npm run:*)",
+      "Bash(find C:UsersjdharProjectsnew-mygig-website -maxdepth 3 \\\\\\(-name *.jpg -o -name *.jpeg -o -name *.webp \\\\\\))",
+      "WebSearch",
+      "Bash(curl -sL -o hero-1.jpg \"https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=400&h=933&fit=crop\")",
+      "Bash(curl -sL -o hero-2.jpg \"https://images.pexels.com/photos/7363190/pexels-photo-7363190.jpeg?auto=compress&cs=tinysrgb&w=400&h=933&fit=crop\")",
+      "Bash(curl -sL -o hero-3.jpg \"https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400&h=933&fit=crop\")",
+      "Bash(curl -sL -o hero-4.jpg \"https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg?auto=compress&cs=tinysrgb&w=400&h=933&fit=crop\")",
+      "Bash(curl -sL -o hero-5.jpg \"https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=400&h=933&fit=crop\")",
+      "Bash(file hero-*.jpg)",
+      "Bash(npx ngrok:*)",
+      "Bash(curl -s http://127.0.0.1:4040/api/tunnels)",
+      "Bash(node -e \"let d='''''''';process.stdin.on\\(''''data'''',c=>d+=c\\);process.stdin.on\\(''''end'''',\\(\\)=>{try{const j=JSON.parse\\(d\\);console.log\\(j.tunnels[0].public_url\\)}catch\\(e\\){console.log\\(''''ngrok not ready or not installed''''\\)}}\\)\")"
+    ]
+  }
+}
