@@ -4,8 +4,7 @@ import ProblemStatement from "@/components/sections/ProblemStatement";
 import SolutionOverview from "@/components/sections/SolutionOverview";
 import WhatIsWaaS from "@/components/sections/WhatIsWaaS";
 import Benefits from "@/components/sections/Benefits";
-import UniqueFeatures from "@/components/sections/UniqueFeatures";
-import SocialProof from "@/components/sections/SocialProof";
+import RolesWeCover from "@/components/sections/RolesWeCover";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
@@ -20,8 +19,7 @@ export default function Home() {
         <SolutionOverview />
         <WhatIsWaaS />
         <Benefits />
-        <UniqueFeatures />
-        <SocialProof />
+        <RolesWeCover />
         <FAQ />
         <FinalCTA />
       </main>

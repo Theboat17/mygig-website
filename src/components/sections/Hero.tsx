@@ -15,15 +15,27 @@ const heroContainer = {
   },
 };
 
-const heroImages = [
-  { src: "/images/hero/hero-1.jpg", alt: "Warehouse picker in orange hi-vis reaching for shelf" },
-  { src: "/images/hero/hero-2.jpg", alt: "Happy female warehouse worker in hi-vis and hard hat" },
-  { src: "/images/hero/hero-3.jpg", alt: "Forklift operators working in distribution centre" },
-  { src: "/images/hero/hero-4.jpg", alt: "Logistics worker in orange vest holding hard hat" },
-  { src: "/images/hero/hero-5.jpg", alt: "Forklift driver in yellow vest operating machinery" },
-];
+interface HeroProps {
+  badge?: string;
+  headline?: string;
+  subtitle?: string;
+  images?: { src: string; alt: string }[];
+}
 
-export default function Hero() {
+export default function Hero({
+  badge = "Sydney",
+  headline = "The smarter way to staff your warehouse",
+  subtitle = "MyGig is your Workforce-as-a-Service partner — scaling casual headcount on demand, optimising your labour mix, and handling all Fair Work compliance as your Employer of Record.",
+  images,
+}: HeroProps) {
+  const heroImages = images || [
+    { src: "/images/hero/hero-1.jpg", alt: "Warehouse picker in orange hi-vis reaching for shelf" },
+    { src: "/images/hero/hero-2.jpg", alt: "Happy female warehouse worker in hi-vis and hard hat" },
+    { src: "/images/hero/hero-3.jpg", alt: "Forklift operators working in distribution centre" },
+    { src: "/images/hero/hero-4.jpg", alt: "Logistics worker in orange vest holding hard hat" },
+    { src: "/images/hero/hero-5.jpg", alt: "Forklift driver in yellow vest operating machinery" },
+  ];
+
   return (
     <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28 lg:pb-32 overflow-hidden">
       <Container>
@@ -37,7 +49,7 @@ export default function Hero() {
           <motion.div variants={staggerChild} className="mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lavender text-primary font-body font-medium text-sm">
               <span className="w-2 h-2 rounded-full bg-accent-vivid animate-pulse" />
-              Now available in Sydney, Melbourne &amp; Brisbane
+              {badge}
             </span>
           </motion.div>
 
@@ -46,7 +58,7 @@ export default function Hero() {
             variants={staggerChild}
             className="font-display font-bold text-[36px] leading-[44px] md:text-[48px] md:leading-[58px] lg:text-[66px] lg:leading-[77px] tracking-[-0.02em] text-neutral-900 max-w-wide mx-auto"
           >
-            The smarter way to staff your warehouse
+            {headline}
           </motion.h1>
 
           {/* Subtitle */}
@@ -54,9 +66,7 @@ export default function Hero() {
             variants={staggerChild}
             className="font-body text-base md:text-lg leading-[30px] text-neutral-700 mt-6 max-w-medium mx-auto"
           >
-            MyGig is your Workforce-as-a-Service partner — scaling casual
-            headcount on demand, optimising your labour mix, and handling all
-            Fair Work compliance as your Employer of Record.
+            {subtitle}
           </motion.p>
 
           {/* CTA Buttons */}
