@@ -23,17 +23,17 @@ interface HeroProps {
 }
 
 export default function Hero({
-  badge = "Sydney",
+  badge = "Available now in Sydney.",
   headline = "The smarter way to staff your warehouse",
   subtitle = "MyGig is your Workforce-as-a-Service partner — scaling casual headcount on demand, optimising your labour mix, and handling all Fair Work compliance as your Employer of Record.",
   images,
 }: HeroProps) {
   const heroImages = images || [
-    { src: "/images/hero/hero-1.jpg", alt: "Warehouse picker in orange hi-vis reaching for shelf" },
-    { src: "/images/hero/hero-2.jpg", alt: "Happy female warehouse worker in hi-vis and hard hat" },
-    { src: "/images/hero/hero-3.jpg", alt: "Forklift operators working in distribution centre" },
-    { src: "/images/hero/hero-4.jpg", alt: "Logistics worker in orange vest holding hard hat" },
-    { src: "/images/hero/hero-5.jpg", alt: "Forklift driver in yellow vest operating machinery" },
+    { src: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600&h=1400&fit=crop", alt: "Forklift driver operating machinery in warehouse" },
+    { src: "https://images.pexels.com/photos/6170088/pexels-photo-6170088.jpeg?auto=compress&cs=tinysrgb&w=600&h=1400&fit=crop", alt: "Female warehouse supervisor with clipboard" },
+    { src: "https://images.pexels.com/photos/4484074/pexels-photo-4484074.jpeg?auto=compress&cs=tinysrgb&w=600&h=1400&fit=crop", alt: "Warehouse team walking through storage aisle" },
+    { src: "https://images.pexels.com/photos/4487385/pexels-photo-4487385.jpeg?auto=compress&cs=tinysrgb&w=600&h=1400&fit=crop", alt: "Worker leaning on pallet jack in warehouse" },
+    { src: "https://images.pexels.com/photos/4480797/pexels-photo-4480797.jpeg?auto=compress&cs=tinysrgb&w=600&h=1400&fit=crop", alt: "Pick packers carrying boxes in warehouse" },
   ];
 
   return (

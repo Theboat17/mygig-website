@@ -10,9 +10,13 @@ import RolesWeCover from "@/components/sections/RolesWeCover";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
-import type { IndustryConfig } from "@/lib/industries";
+import { warehouse, retail, events } from "@/lib/industries";
 
-export default function IndustryPage({ config }: { config: IndustryConfig }) {
+const configs = { warehouse, retail, events } as const;
+
+export default function IndustryPage({ industry }: { industry: keyof typeof configs }) {
+  const config = configs[industry];
+
   return (
     <>
       <NavBar />

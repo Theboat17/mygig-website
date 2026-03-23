@@ -7,10 +7,10 @@ import { fadeUp, staggerContainer, staggerChild, viewportConfig } from "../anima
 import type { Role } from "@/lib/industries";
 
 const defaultRoles: Role[] = [
-  { icon: ShoppingCart, title: "Warehouse Assistant", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=500&fit=crop&crop=faces" },
-  { icon: Truck, title: "Forklift Operator", image: "https://images.unsplash.com/photo-1601598851547-4302969d0614?w=400&h=500&fit=crop&crop=faces" },
-  { icon: Package, title: "Pick Packers", image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&h=500&fit=crop&crop=faces" },
-  { icon: Layers, title: "Sorter", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=500&fit=crop&crop=faces" },
+  { icon: ShoppingCart, title: "Warehouse Assistant", image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&dpr=2&fit=crop" },
+  { icon: Truck, title: "Forklift Operator", image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&dpr=2&fit=crop" },
+  { icon: Package, title: "Pick Packers", image: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&dpr=2&fit=crop" },
+  { icon: Layers, title: "Sorter", image: "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&dpr=2&fit=crop" },
 ];
 
 interface RolesWeCoverProps {
