@@ -31,8 +31,8 @@ export default function HomeHero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden" style={{ backgroundColor: "#dde1ff" }}>
-        <Container className="py-24 md:py-32 lg:py-36">
+      <section className="relative overflow-hidden pb-0" style={{ backgroundColor: "#dde1ff" }}>
+        <Container className="pt-24 md:pt-32 lg:pt-36 pb-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:items-stretch">
             {/* Left — Text */}
             <motion.div
@@ -63,7 +63,7 @@ export default function HomeHero() {
                 We staff workers instantly, at scale and with care. MyGig is Australia&apos;s Employer of Record platform for casual workforce management.
               </motion.p>
 
-              <motion.div variants={heroChild} className="mt-10 flex flex-wrap gap-4">
+              <motion.div variants={heroChild} className="mt-10 mb-16 md:mb-20 flex flex-wrap gap-4">
                 <Button variant="primary" size="large" href="/demo">
                   Book a demo
                 </Button>
@@ -75,7 +75,7 @@ export default function HomeHero() {
 
             {/* Right — Platform screenshot, flat, slides in from right */}
             <motion.div
-              className="relative flex items-center"
+              className="relative flex items-end self-end"
               initial={{ opacity: 0, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: customEase, delay: 0.4 }}
@@ -84,7 +84,7 @@ export default function HomeHero() {
               <img
                 src="/images/platform-screenshot-edited.png"
                 alt="MyGig Business platform - shift scheduling interface"
-                className="w-full max-w-none lg:scale-[1.375] lg:origin-left h-auto rounded-lg"
+                className="w-full max-w-none lg:scale-[1.5] lg:origin-bottom-left h-auto rounded-lg"
               />
             </motion.div>
           </div>

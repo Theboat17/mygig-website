@@ -31,9 +31,9 @@ export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-400/30">
       <Container>
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center mr-auto">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/mygig-logo-white.png"
@@ -82,10 +82,8 @@ export default function NavBar() {
             <a href="#faq" className="font-body text-sm text-neutral-900 hover:text-accent-vivid transition-colors duration-200">
               FAQ
             </a>
-          </div>
 
-          {/* Desktop CTAs */}
-          <div className="hidden md:flex items-center gap-3">
+            {/* CTAs inline */}
             <Button variant="primary" size="small" href="/demo">
               Book a demo
             </Button>
