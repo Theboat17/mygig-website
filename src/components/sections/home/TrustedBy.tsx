@@ -6,7 +6,7 @@ import { fadeUp, viewportConfig } from "../../animation/variants";
 
 export default function TrustedBy() {
   return (
-    <section className="bg-white py-10 md:py-14 border-b border-neutral-400/20">
+    <section className="bg-white pt-24 md:pt-28 pb-10 md:pb-14 border-b border-neutral-400/20">
       <Container>
         <motion.div
           variants={fadeUp}

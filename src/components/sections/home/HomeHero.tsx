@@ -31,7 +31,7 @@ export default function HomeHero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-white overflow-hidden">
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#dde1ff" }}>
         <Container className="py-24 md:py-32 lg:py-36">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:items-stretch">
             {/* Left — Text */}
@@ -41,7 +41,7 @@ export default function HomeHero() {
               animate="visible"
             >
               <motion.div variants={heroChild}>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-vivid/30 bg-accent-vivid/10 mb-8">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-vivid/30 bg-white mb-8">
                   <span className="w-2 h-2 rounded-full bg-accent-vivid animate-pulse" />
                   <span className="font-body font-medium text-sm text-accent-vivid">
                     Workforce-as-a-Service
@@ -84,15 +84,15 @@ export default function HomeHero() {
               <img
                 src="/images/platform-screenshot-edited.png"
                 alt="MyGig Business platform - shift scheduling interface"
-                className="w-full max-w-none lg:scale-110 lg:origin-left h-auto rounded-lg"
+                className="w-full max-w-none lg:scale-[1.375] lg:origin-left h-auto rounded-lg"
               />
             </motion.div>
           </div>
         </Container>
       </section>
 
-      {/* Worker Photos Strip — full width, staggered heights */}
-      <section className="bg-white overflow-hidden pb-12">
+      {/* Worker Photos Strip — overlapping hero and next section */}
+      <div className="relative z-10 -mt-16 pb-0" style={{ marginBottom: "-60px" }}>
         <div className="flex gap-3 md:gap-4 px-4 items-end">
           {workerImages.map((img, i) => {
             // Alternate stagger pattern: odd items are taller and shifted up
@@ -125,7 +125,7 @@ export default function HomeHero() {
             );
           })}
         </div>
-      </section>
+      </div>
     </>
   );
 }

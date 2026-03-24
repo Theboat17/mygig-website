@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Shield, BarChart3, Zap } from "lucide-react";
+import { Users, Shield, BarChart3, Zap, ArrowRight } from "lucide-react";
 import Container from "../../layout/Container";
 import { staggerContainer, staggerChild, customEase, viewportConfig } from "../../animation/variants";
 
@@ -11,24 +11,28 @@ const capabilities = [
     title: "Instantly connect with reliable, vetted workers",
     description: "Take advantage of the most effective sourcing, screening and matching process. Combining proactive recruitment, advanced AI technology, and the perfect touch of human interaction to ensure peak efficiency and reliability.",
     image: "https://images.pexels.com/photos/4484043/pexels-photo-4484043.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    link: "/product#recruitment",
   },
   {
     icon: Shield,
     title: "Full compliance as your Employer of Record",
     description: "MyGig is the legal employer for all casual staff on the platform. Fair Work compliance, payroll, tax, super, and workers\u2019 comp are all handled \u2014 removing risk from your business entirely.",
     image: "https://images.pexels.com/photos/6170088/pexels-photo-6170088.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    link: "/product#compliance",
   },
   {
     icon: BarChart3,
     title: "Simplify workforce planning and management",
     description: "Get full visibility over your sites with real-time attendance tracking and GPS-verified timesheets. Know exactly who shows up, on time, at each site to improve workforce management.",
     image: "https://images.pexels.com/photos/4487385/pexels-photo-4487385.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    link: "/product#workforce-planning",
   },
   {
     icon: Zap,
     title: "Optimise your HR strategy and maximise performance",
     description: "Get live, reliable data and analytics to make more informed decisions and optimise your casual staffing strategy. Easily share insights, charts and reports between teams to maximise overall performance.",
     image: "https://images.pexels.com/photos/4480797/pexels-photo-4480797.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    link: "/product#payroll",
   },
 ];
 
@@ -62,9 +66,16 @@ export default function CapabilityRows() {
                   <h2 className="font-display font-bold text-[28px] leading-[36px] md:text-[36px] md:leading-[44px] tracking-[-0.01em] text-neutral-900 mb-4">
                     {cap.title}
                   </h2>
-                  <p className="font-body text-lg leading-[30px] text-neutral-700">
+                  <p className="font-body text-lg leading-[30px] text-neutral-700 mb-6">
                     {cap.description}
                   </p>
+                  <a
+                    href={cap.link}
+                    className="inline-flex items-center gap-2 font-body font-semibold text-base text-accent-vivid hover:text-accent-vivid/80 transition-colors group"
+                  >
+                    Learn more
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </motion.div>
 
                 {/* Image */}

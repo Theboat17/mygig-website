@@ -58,7 +58,7 @@ export default function PlatformSection() {
             </motion.div>
 
             <motion.div variants={staggerChild}>
-              <Button variant="secondary" size="medium" href="/demo">
+              <Button variant="secondary" size="medium" href="/product">
                 Learn more
               </Button>
             </motion.div>
