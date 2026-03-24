@@ -75,7 +75,7 @@ export default function HomeHero() {
 
             {/* Right — Platform screenshot, flat, slides in from right */}
             <motion.div
-              className="relative flex items-end self-end"
+              className="relative flex items-end self-end pt-16 lg:pt-24"
               initial={{ opacity: 0, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: customEase, delay: 0.4 }}
