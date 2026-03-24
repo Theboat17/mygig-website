@@ -74,7 +74,7 @@ export default function Hero({
             <ButtonPair
               primaryText="Book a demo"
               secondaryText="See how it works"
-              primaryHref="#demo"
+              primaryHref="/demo"
               secondaryHref="#solution"
             />
           </motion.div>

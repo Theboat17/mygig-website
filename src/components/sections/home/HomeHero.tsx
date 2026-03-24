@@ -15,67 +15,117 @@ const heroChild = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: customEase } },
 };
 
+const workerImages = [
+  { src: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Worker in hard hat smiling" },
+  { src: "https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Warehouse picker" },
+  { src: "https://images.pexels.com/photos/4484074/pexels-photo-4484074.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Forklift operator" },
+  { src: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Warehouse team working" },
+  { src: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Worker scanning packages" },
+  { src: "https://images.pexels.com/photos/4483942/pexels-photo-4483942.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Logistics worker with scanner" },
+  { src: "https://images.pexels.com/photos/4484153/pexels-photo-4484153.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Warehouse supervisor" },
+  { src: "https://images.pexels.com/photos/4483773/pexels-photo-4483773.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Pick packer at work" },
+  { src: "https://images.pexels.com/photos/4483608/pexels-photo-4483608.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop&crop=faces", alt: "Warehouse sorter" },
+];
+
 export default function HomeHero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://images.pexels.com/photos/4484074/pexels-photo-4484074.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Warehouse team"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-primary/85" />
-      </div>
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-white overflow-hidden">
+        <Container className="py-24 md:py-32 lg:py-36">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left — Text */}
+            <motion.div
+              variants={heroContainer}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div variants={heroChild}>
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-vivid/30 bg-accent-vivid/10 mb-8">
+                  <span className="w-2 h-2 rounded-full bg-accent-vivid animate-pulse" />
+                  <span className="font-body font-medium text-sm text-accent-vivid">
+                    Workforce-as-a-Service
+                  </span>
+                </span>
+              </motion.div>
 
-      {/* Decorative gradient orb */}
-      <motion.div
-        className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-accent-vivid/20 blur-[150px] z-0"
-        animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
+              <motion.h1
+                variants={heroChild}
+                className="font-display font-bold text-[36px] leading-[44px] md:text-[48px] md:leading-[56px] lg:text-[64px] lg:leading-[72px] tracking-[-0.02em] text-primary"
+              >
+                Your workforce partner for casual staffing
+              </motion.h1>
 
-      <Container className="relative z-10 py-32 md:py-40">
-        <motion.div
-          variants={heroContainer}
-          initial="hidden"
-          animate="visible"
-          className="max-w-[800px]"
-        >
-          <motion.div variants={heroChild}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-vivid/30 bg-accent-vivid/10 mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent-vivid animate-pulse" />
-              <span className="font-body font-medium text-sm text-accent-vivid">
-                Workforce-as-a-Service
-              </span>
-            </span>
-          </motion.div>
+              <motion.p
+                variants={heroChild}
+                className="font-body text-lg md:text-xl leading-[32px] text-primary/70 mt-6 max-w-[540px]"
+              >
+                We staff workers instantly, at scale and with care. MyGig is Australia&apos;s Employer of Record platform for casual workforce management.
+              </motion.p>
 
-          <motion.h1
-            variants={heroChild}
-            className="font-display font-bold text-[40px] leading-[48px] md:text-[56px] md:leading-[66px] lg:text-[72px] lg:leading-[82px] tracking-[-0.02em] text-white"
-          >
-            Your workforce partner for casual staffing
-          </motion.h1>
+              <motion.div variants={heroChild} className="mt-10 flex flex-wrap gap-4">
+                <Button variant="primary" size="large" href="/demo">
+                  Book a demo
+                </Button>
+                <Button variant="secondary" size="large" href="/worker">
+                  Looking for work?
+                </Button>
+              </motion.div>
+            </motion.div>
 
-          <motion.p
-            variants={heroChild}
-            className="font-body text-lg md:text-xl leading-[32px] text-white/70 mt-6 max-w-[640px]"
-          >
-            We staff workers instantly, at scale and with care. MyGig is Australia&apos;s Employer of Record platform for casual workforce management.
-          </motion.p>
+            {/* Right — Platform screenshot, flat, slides in from right */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 80 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: customEase, delay: 0.4 }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/platform-screenshot.jpg"
+                alt="MyGig Business platform - shift scheduling interface"
+                className="w-full h-auto rounded-lg"
+              />
+            </motion.div>
+          </div>
+        </Container>
+      </section>
 
-          <motion.div variants={heroChild} className="mt-10 flex flex-wrap gap-4">
-            <Button variant="primary" size="large" href="#demo">
-              Book a demo
-            </Button>
-            <Button variant="secondary-dark" size="large" href="#platform">
-              See how it works
-            </Button>
-          </motion.div>
-        </motion.div>
-      </Container>
-    </section>
+      {/* Worker Photos Strip — full width, staggered heights */}
+      <section className="bg-white overflow-hidden pb-12">
+        <div className="flex gap-3 md:gap-4 px-4 items-end">
+          {workerImages.map((img, i) => {
+            // Alternate stagger pattern: odd items are taller and shifted up
+            const isRaised = i % 2 === 0;
+            return (
+              <motion.div
+                key={i}
+                className="flex-1 min-w-0"
+                style={{ marginTop: isRaised ? 0 : "40px", marginBottom: isRaised ? "40px" : 0 }}
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.6,
+                  ease: customEase,
+                  delay: i * 0.08,
+                }}
+              >
+                <div className="relative rounded-xl overflow-hidden aspect-[2/3]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Subtle purple overlay on hover */}
+                  <div className="absolute inset-0 bg-accent-vivid/0 hover:bg-accent-vivid/10 transition-colors duration-300" />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+    </>
   );
 }

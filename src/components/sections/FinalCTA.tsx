@@ -49,7 +49,7 @@ export default function FinalCTA({
               {headline}
             </h2>
             <p className="font-body text-lg leading-[30px] text-neutral-800 mb-8">{subtitle}</p>
-            <ButtonPair primaryText="Book a demo" secondaryText="Talk to our team" primaryHref="#demo" secondaryHref="#contact" align="left" />
+            <ButtonPair primaryText="Book a demo" secondaryText="Talk to our team" primaryHref="/demo" secondaryHref="#contact" align="left" />
           </motion.div>
         </div>
       </Container>

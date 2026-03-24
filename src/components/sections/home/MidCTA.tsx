@@ -22,7 +22,7 @@ export default function MidCTA() {
           <p className="font-body text-lg text-white/60 mb-8">
             Join companies across Australia using MyGig to scale their casual workforce with confidence.
           </p>
-          <Button variant="primary" size="large" href="#demo">
+          <Button variant="primary" size="large" href="/demo">
             Book a demo
           </Button>
         </motion.div>

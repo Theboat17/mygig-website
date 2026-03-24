@@ -6,35 +6,38 @@ const footerColumns = [
   {
     title: "For Businesses",
     links: [
-      "Recruitment",
-      "Onboarding",
-      "Payroll",
-      "Time & Attendance",
-      "Award Interpretation",
-      "Compliance",
-      "Pricing",
+      { label: "Recruitment", href: "#" },
+      { label: "Onboarding", href: "#" },
+      { label: "Payroll", href: "#" },
+      { label: "Time & Attendance", href: "#" },
+      { label: "Award Interpretation", href: "#" },
+      { label: "Compliance", href: "#" },
     ],
   },
   {
     title: "For Workers",
-    links: ["Find Work", "Download the App", "How It Works", "FAQs"],
+    links: [
+      { label: "Find Work", href: "/worker" },
+      { label: "Download the App", href: "#" },
+      { label: "FAQs", href: "/#faq" },
+    ],
   },
   {
-    title: "Industries",
+    title: "Solutions",
     links: [
-      "Warehousing",
-      "Logistics",
-      "Retail",
-      "Construction",
-      "Hospitality",
-      "Events",
-      "Agriculture",
-      "Manufacturing",
+      { label: "Warehousing & Logistics", href: "/warehousing" },
+      { label: "Retail", href: "/retail" },
+      { label: "Events", href: "/events" },
     ],
   },
   {
     title: "Company",
-    links: ["About", "Careers", "Blog", "Contact", "ISO 27001"],
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Use", href: "/terms-of-use" },
+      { label: "Contact", href: "mailto:support@mygig.com.au" },
+    ],
   },
 ];
 
@@ -51,12 +54,12 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="font-body text-lg text-neutral-600 hover:text-white transition-colors duration-200"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -85,14 +88,14 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="#"
+                href="/privacy-policy"
                 className="font-body text-sm text-neutral-600 hover:text-white transition-colors"
               >
                 Privacy Policy
               </a>
               <span className="text-neutral-600">|</span>
               <a
-                href="#"
+                href="/terms-of-use"
                 className="font-body text-sm text-neutral-600 hover:text-white transition-colors"
               >
                 Terms of Use

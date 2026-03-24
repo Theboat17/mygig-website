@@ -103,7 +103,7 @@ export default function NavBar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="primary" size="small" href="#demo">
+            <Button variant="primary" size="small" href="/demo">
               Book a demo
             </Button>
 
@@ -183,7 +183,7 @@ export default function NavBar() {
                 <a href="https://business.mygig.com.au/" target="_blank" rel="noopener noreferrer" className="font-body text-lg text-neutral-900 py-1 pl-3" onClick={() => setMobileOpen(false)}>Business</a>
                 <a href="https://worker.mygig.com.au/" target="_blank" rel="noopener noreferrer" className="font-body text-lg text-neutral-900 py-1 pl-3" onClick={() => setMobileOpen(false)}>Worker</a>
                 <div className="pt-4">
-                  <Button variant="primary" href="#demo" className="w-full">Book a demo</Button>
+                  <Button variant="primary" href="/demo" className="w-full">Book a demo</Button>
                 </div>
               </div>
             </Container>
