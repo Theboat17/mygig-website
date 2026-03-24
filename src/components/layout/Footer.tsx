@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Instagram } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import Image from "next/image";
 import Container from "./Container";
 
@@ -6,19 +6,19 @@ const footerColumns = [
   {
     title: "For Businesses",
     links: [
-      { label: "Recruitment", href: "#" },
-      { label: "Onboarding", href: "#" },
-      { label: "Payroll", href: "#" },
-      { label: "Time & Attendance", href: "#" },
-      { label: "Award Interpretation", href: "#" },
-      { label: "Compliance", href: "#" },
+      { label: "Recruitment", href: "/product#recruitment" },
+      { label: "Onboarding", href: "/product#onboarding" },
+      { label: "Payroll", href: "/product#payroll" },
+      { label: "Time & Attendance", href: "/product#time-attendance" },
+      { label: "Award Interpretation", href: "/product#award-interpretation" },
+      { label: "Compliance", href: "/product#compliance" },
     ],
   },
   {
     title: "For Workers",
     links: [
       { label: "Find Work", href: "/worker" },
-      { label: "Download the App", href: "#" },
+      { label: "Download the App", href: "https://worker.mygig.com.au/signin" },
       { label: "FAQs", href: "/#faq" },
     ],
   },
@@ -36,7 +36,7 @@ const footerColumns = [
       { label: "About", href: "/about" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Use", href: "/terms-of-use" },
-      { label: "Contact", href: "mailto:support@mygig.com.au" },
+      { label: "Contact", href: "/demo" },
     ],
   },
 ];
@@ -83,9 +83,6 @@ export default function Footer() {
 
           {/* Copyright & Links */}
           <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-            <p className="font-body text-sm text-neutral-600">
-              &copy; 2026 MyGig. All rights reserved.
-            </p>
             <div className="flex items-center gap-4">
               <a
                 href="/privacy-policy"
@@ -103,19 +100,25 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social Icons */}
+          {/* LinkedIn */}
           <div className="flex items-center gap-4">
-            {[Facebook, Linkedin, Instagram].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="text-neutral-600 hover:text-white transition-colors duration-200"
-                aria-label={Icon.displayName}
-              >
-                <Icon size={20} />
-              </a>
-            ))}
+            <a
+              href="https://www.linkedin.com/company/mygig-australia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-600 hover:text-white transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
           </div>
+        </div>
+
+        {/* Legal Copyright */}
+        <div className="mt-6 text-center">
+          <p className="font-body text-xs text-neutral-600/60">
+            Copyright &copy; Workforce Technologies Pty Ltd &amp; MyGig Workforce Pty Ltd trading as MyGig
+          </p>
         </div>
       </Container>
     </footer>

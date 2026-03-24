@@ -13,7 +13,13 @@ const solutionsLinks = [
 ];
 
 const productLinks = [
-  { label: "Coming soon", href: "#" },
+  { label: "Recruitment", href: "/product#recruitment" },
+  { label: "Onboarding", href: "/product#onboarding" },
+  { label: "Workforce Planning", href: "/product#workforce-planning" },
+  { label: "Payroll", href: "/product#payroll" },
+  { label: "Time & Attendance", href: "/product#time-attendance" },
+  { label: "Award Interpretation", href: "/product#award-interpretation" },
+  { label: "Compliance", href: "/product#compliance" },
 ];
 
 export default function NavBar() {
@@ -81,15 +87,16 @@ export default function NavBar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-neutral-400/20 overflow-hidden"
+                    className="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-neutral-400/20 overflow-hidden"
                   >
                     {productLinks.map((link) => (
-                      <span
+                      <a
                         key={link.label}
-                        className="block px-4 py-2.5 font-body text-sm text-neutral-400 cursor-default"
+                        href={link.href}
+                        className="block px-4 py-2.5 font-body text-sm text-neutral-900 hover:bg-lavender hover:text-accent-vivid transition-colors duration-150"
                       >
                         {link.label}
-                      </span>
+                      </a>
                     ))}
                   </motion.div>
                 )}
@@ -175,7 +182,11 @@ export default function NavBar() {
                 ))}
                 <div className="border-t border-neutral-400/20 my-2" />
                 <p className="font-body font-bold text-xs uppercase tracking-wider text-neutral-500">Product</p>
-                <span className="font-body text-lg text-neutral-400 py-1 pl-3">Coming soon</span>
+                {productLinks.map((link) => (
+                  <a key={link.label} href={link.href} className="font-body text-lg text-neutral-900 py-1 pl-3" onClick={() => setMobileOpen(false)}>
+                    {link.label}
+                  </a>
+                ))}
                 <div className="border-t border-neutral-400/20 my-2" />
                 <a href="#faq" className="font-body text-lg text-neutral-900 py-2" onClick={() => setMobileOpen(false)}>FAQ</a>
                 <div className="border-t border-neutral-400/20 my-2" />

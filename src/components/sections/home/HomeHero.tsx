@@ -33,7 +33,7 @@ export default function HomeHero() {
       {/* Hero Section */}
       <section className="relative bg-white overflow-hidden">
         <Container className="py-24 md:py-32 lg:py-36">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:items-stretch">
             {/* Left — Text */}
             <motion.div
               variants={heroContainer}
@@ -75,16 +75,16 @@ export default function HomeHero() {
 
             {/* Right — Platform screenshot, flat, slides in from right */}
             <motion.div
-              className="relative"
+              className="relative flex items-center"
               initial={{ opacity: 0, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: customEase, delay: 0.4 }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/platform-screenshot.jpg"
+                src="/images/platform-screenshot-edited.png"
                 alt="MyGig Business platform - shift scheduling interface"
-                className="w-full h-auto rounded-lg"
+                className="w-full max-w-none lg:scale-110 lg:origin-left h-auto rounded-lg"
               />
             </motion.div>
           </div>

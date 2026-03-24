@@ -124,7 +124,7 @@ export default function WorkerPage() {
                   <Button variant="primary" size="large" href="https://worker.mygig.com.au/">
                     Get started
                   </Button>
-                  <Button variant="secondary" size="large" href="#">
+                  <Button variant="secondary" size="large" href="https://worker.mygig.com.au/signin">
                     <Download size={18} className="mr-2" />
                     Download the app
                   </Button>
@@ -332,7 +332,7 @@ export default function WorkerPage() {
                       Get started <ArrowRight size={18} />
                     </a>
                     <a
-                      href="#"
+                      href="https://worker.mygig.com.au/signin"
                       className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-white text-white font-body font-semibold text-lg hover:bg-white/10 transition-colors"
                     >
                       <Download size={18} /> Download the app
