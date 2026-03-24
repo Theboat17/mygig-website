@@ -92,7 +92,7 @@ export default function HomeHero() {
       </section>
 
       {/* Worker Photos Strip — overlapping hero and next section */}
-      <div className="relative z-10 -mt-16 pb-0" style={{ marginBottom: "-60px" }}>
+      <div className="relative z-10 mt-8 md:mt-12 pb-0" style={{ marginBottom: "-60px" }}>
         <div className="flex gap-3 md:gap-4 px-4 items-end">
           {workerImages.map((img, i) => {
             // Alternate stagger pattern: odd items are taller and shifted up

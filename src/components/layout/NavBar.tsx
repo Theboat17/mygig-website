@@ -45,6 +45,11 @@ export default function NavBar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
+            {/* Product — simple link */}
+            <a href="/product" className="font-body text-sm text-neutral-900 hover:text-accent-vivid transition-colors duration-200">
+              Product
+            </a>
+
             {/* Solutions Dropdown */}
             <div className="relative" onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)}>
               <button className="font-body text-sm text-neutral-900 hover:text-accent-vivid transition-colors duration-200 flex items-center gap-1">
@@ -61,35 +66,6 @@ export default function NavBar() {
                     className="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-neutral-400/20 overflow-hidden"
                   >
                     {solutionsLinks.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        className="block px-4 py-2.5 font-body text-sm text-neutral-900 hover:bg-lavender hover:text-accent-vivid transition-colors duration-150"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Product Dropdown */}
-            <div className="relative" onMouseEnter={() => setProductOpen(true)} onMouseLeave={() => setProductOpen(false)}>
-              <button className="font-body text-sm text-neutral-900 hover:text-accent-vivid transition-colors duration-200 flex items-center gap-1">
-                Product
-                <ChevronDown size={14} className={`transition-transform duration-200 ${productOpen ? "rotate-180" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {productOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-neutral-400/20 overflow-hidden"
-                  >
-                    {productLinks.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
@@ -174,15 +150,10 @@ export default function NavBar() {
           >
             <Container className="py-6">
               <div className="flex flex-col gap-4">
-                <p className="font-body font-bold text-xs uppercase tracking-wider text-neutral-500 pt-2">Solutions</p>
-                {solutionsLinks.map((link) => (
-                  <a key={link.label} href={link.href} className="font-body text-lg text-neutral-900 py-1 pl-3" onClick={() => setMobileOpen(false)}>
-                    {link.label}
-                  </a>
-                ))}
+                <a href="/product" className="font-body text-lg font-semibold text-neutral-900 py-2" onClick={() => setMobileOpen(false)}>Product</a>
                 <div className="border-t border-neutral-400/20 my-2" />
-                <p className="font-body font-bold text-xs uppercase tracking-wider text-neutral-500">Product</p>
-                {productLinks.map((link) => (
+                <p className="font-body font-bold text-xs uppercase tracking-wider text-neutral-500">Solutions</p>
+                {solutionsLinks.map((link) => (
                   <a key={link.label} href={link.href} className="font-body text-lg text-neutral-900 py-1 pl-3" onClick={() => setMobileOpen(false)}>
                     {link.label}
                   </a>
